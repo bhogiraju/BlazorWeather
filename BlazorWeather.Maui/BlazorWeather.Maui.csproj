@@ -18,7 +18,7 @@
         <ApplicationId>com.microsoft.blazorweather</ApplicationId>
 
         <!-- Versions -->
-			  <ApplicationVersion>1</ApplicationVersion>
+        <ApplicationVersion>1</ApplicationVersion>
 
         <!-- Required for C# Hot Reload -->
         <UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
@@ -60,10 +60,10 @@
         <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     </PropertyGroup>
 
-	  <PropertyGroup>
-    		<!-- Required - WinUI can't deploy in a multi-targeting environment -->
-    		<RuntimeIdentifier Condition="$(TargetFramework.Contains('-windows'))">win-x64</RuntimeIdentifier>
-  	</PropertyGroup>
+    <PropertyGroup>
+        <!-- Required - WinUI can't deploy in a multi-targeting environment -->
+        <RuntimeIdentifier Condition="$(TargetFramework.Contains('-windows'))">win-x64</RuntimeIdentifier>
+    </PropertyGroup>
 	
     <ItemGroup>
         <Content Remove="Properties\launchSettings.json" />
